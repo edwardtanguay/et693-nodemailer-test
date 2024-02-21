@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-var transporter = createTransport({
+const transporter = createTransport({
 	service: 'gmail',
 	auth: {
 		user: process.env.GOOGLE_MAIL_ACCOUNT_USER, // e.g. sitemailer92833
@@ -11,9 +11,9 @@ var transporter = createTransport({
 	},
 });
 
-var mailOptions = {
+const mailOptions = {
 	from: `Language Community Site <${process.env.GOOGLE_MAIL_ACCOUNT_USER}@gmail.com>`,
-	to: 'thereceipient@domain.com', // change this to email you want to received test mails at
+	to: 'edwardtanguay@gmail.com', // change this to email you want to received test mails at
 	subject: 'Please confirm your registration',
 	html: `
 <h1>Please confirm your registration</h1>	
